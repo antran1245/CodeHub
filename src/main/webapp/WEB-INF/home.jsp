@@ -32,6 +32,6 @@
 			</div>
 		</nav>
 	</div>
-	<h1>i love AN</h1>
+	<h1>i love SAM</h1>
 </body>
 </html>
