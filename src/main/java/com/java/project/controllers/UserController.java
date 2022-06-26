@@ -1,11 +1,5 @@
 package com.java.project.controllers;
 
-
-
-
-
-
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,26 +12,14 @@ import com.java.project.models.User;
 import com.java.project.services.UserService;
 
 
-
-
-
-
-
-
-
-
-
-
 @Controller
 public class UserController {
 
 	@Autowired
 	private UserService userServ;
-	
-	
-	
+
 //	========================== DISPLAY ======================================
-	@GetMapping("/")
+	@GetMapping("/login")
 	public String index(Model model, HttpSession sesh) {
 		model.addAttribute("newUser", new User());
 		model.addAttribute("newLogin", new LoginUser());

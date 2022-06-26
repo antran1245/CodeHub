@@ -27,7 +27,7 @@
 			<div class="d-flex justify-content-end" id="navbarContent">
 				<ul class="navbar-nav mx-1 d-flex justify-content-end flex-row">
 					<li class="nav-item mx-1">
-						<a class="btn btn-outline-primary" href="">Create a Post</a>
+						<a class="btn btn-outline-primary" href="/project/new">Create a Post</a>
 					</li>
 					<li class="nav-item">
 						<a class="btn btn-outline-primary" href="">Login/Sign Up</a>
