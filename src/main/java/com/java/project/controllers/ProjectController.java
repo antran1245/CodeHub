@@ -63,18 +63,24 @@ public class ProjectController {
 	@SuppressWarnings("rawtypes")
 	@PostMapping(value="/project/new")
 	public String createProject(@Valid @ModelAttribute("newProject") UploadProject project, BindingResult result) throws IOException {
-		if(result.hasErrors()) {
-			return "/project/newProject.jsp";
+		if(project.getFile() != null && !project.getFile().isEmpty()) {
+			if(project.getFile().getSize() > 10485760) {
+				result.rejectValue("file", "Max size", "Over the max file size.");
+			}
 		}
+//		if(result.hasErrors()) {
+//			return "/project/newProject.jsp";
+//		}
+		
 		Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
 				"cloud_name", cloudName,
 				"api_key", apiKey,
 				"api_secret", apiSecret,
 				"secure", true));
 		
+		Project p = new Project();
 		
 		Map uploadResult = null;
-		
 		if(project.getFile() != null && !project.getFile().isEmpty()) {
 			
 			Date timestamp = new Date();
@@ -85,15 +91,14 @@ public class ProjectController {
 			
 			uploadResult = cloudinary.uploader().upload(project.getFile().getBytes(),
 					params);
+			p.setImage((String) uploadResult.get("url"));
 		}
 		
-		Project p = new Project();
 		p.setTitle(project.getTitle());
 		p.setCaption(project.getCaption());
 		p.setContent(project.getContent());
-		p.setImage((String) uploadResult.get("url"));
 		
-		projectService.save(p);
+//		projectService.save(p);
 		return "redirect:/";
 	}
 	@PutMapping("/project/{id}/edit")

@@ -41,8 +41,9 @@
 						<form:errors class="text-danger" path="content"/>
 					</div>
 					<div class="mb-4">
-						<form:label class="form-label" path="file"><b>Upload Image</b></form:label>
-						<form:input class="form-control" name="fileInput" type="file" path="file"/>
+						<form:label class="form-label" path="file"><b>Upload Image</b> (10MB max)</form:label>
+						<form:input class="form-control" type="file" path="file"/>
+						<form:errors class="text-danger" path="file"/>
 					</div>
 					<div class="mb-4 row">
 						<div class="col">
