@@ -13,66 +13,1118 @@
     <meta charset="UTF-8">
     <title>Swag Muney Ghang Ghang</title>
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/main.css"> <!-- change to match your file/naming structure -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/login.css"> <!-- change to match your file/naming structure -->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container">
-		<header class="row">
-				<h1 class="heading-text">CodeHub</h1>
-				
-		</header>
-		<div class="row">
-			<div class="col form-box p-3 m-2">
-				<h2>Register</h2>
-				<form:form method="post" action="/reg" modelAttribute="newUser">
-					<div class="mb-3">
-						<form:label path="first_name" class="form-label">First Name: </form:label>
-						<form:input path="first_name" class="form-control"/>
-						<form:errors path="first_name" class="text-danger"/>
-					</div>
-					<div class="mb-3">
-						<form:label path="last_name" class="form-label">Last Name: </form:label>
-						<form:input path="last_name" class="form-control"/>
-						<form:errors path="last_name" class="text-danger"/>
-					</div>
-					<div class="mb-3">
-						<form:label path="email" class="form-label">Email: </form:label>
-						<form:input type="email" path="email" class="form-control"/>
-						<form:errors path="email" class="text-danger"/>
-					</div>
-					<div class="mb-3">
-						<form:label path="password" class="form-label">Password: </form:label>
-						<form:input type="password" path="password" class="form-control"/>
-						<form:errors path="password" class="text-danger"/>
-					</div>
-					<div class="mb-3">
-						<form:label path="confirmPassword" class="form-label">Confirm Password: </form:label>
-						<form:input type="password" path="confirmPassword" class="form-control"/>
-						<form:errors path="confirmPassword" class="text-danger"/>
-					</div>
-					<button type="submit" class="btn btn-primary">Sign Up</button>
-				</form:form>
-			</div>
-			<div class="col form-box p-3 m-2">
-				<h2>Log in</h2>
-				<form:form method="post" action="/login" modelAttribute="newLogin">
-					<div class="mb-3">
-						<form:label path="email">Email: </form:label>
-						<form:input type="email" path="email" class="form-control"/>
-						<form:errors path="email" class="text-danger"/>
-					</div>
-					<div class="mb-3">
-						<form:label path="password" class="form-label">Password: </form:label>
-						<form:input type="password" path="password" class="form-control"/>
-						<form:errors path="password" class="text-danger"/>
-					</div>
-					<button type="submit" class="btn btn-primary">Log in</button>
-				</form:form>
-			</div>
-		</div>
+<section>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
 	</div>
-   
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div><div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+	<div class="row">
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+		<div>
+			<i class="fa-solid fa-frog"></i>
+			<i class="fa-solid fa-shuttle-space"></i>
+			<i class="fa-solid fa-burger"></i>
+			<i class="fa-solid fa-fish-fins"></i>
+			<i class="fa-solid fa-martini-glass-citrus"></i>
+			<i class="fa-solid fa-cake-candles"></i>
+			<i class="fa-solid fa-face-grin-hearts"></i>
+			<i class="fa-solid fa-jedi"></i>
+			<i class="fa-solid fa-helicopter"></i>
+			<i class="fa-solid fa-ban"></i>
+			<i class="fa-solid fa-biohazard"></i>
+			<i class="fa-solid fa-bomb"></i>
+			<i class="fa-solid fa-car-burst"></i>
+			<i class="fa-solid fa-bong"></i>
+			<i class="fa-solid fa-chess"></i>
+			<i class="fa-solid fa-hat-wizard"></i>
+			<i class="fa-solid fa-ice-cream"></i>
+			<i class="fa-solid fa-skull-crossbones"></i>
+			<i class="fa-solid fa-star-of-david"></i>
+			<i class="fa-solid fa-snowman"></i>
+		</div>	
+	</div>
+</section>
+	
+	
 </body>
 </html>

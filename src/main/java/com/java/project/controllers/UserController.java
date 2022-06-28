@@ -37,7 +37,7 @@ public class UserController {
 	
 	
 //	========================== DISPLAY ======================================
-	@GetMapping("/")
+	@GetMapping("/login")
 	public String index(Model model, HttpSession sesh) {
 		model.addAttribute("newUser", new User());
 		model.addAttribute("newLogin", new LoginUser());

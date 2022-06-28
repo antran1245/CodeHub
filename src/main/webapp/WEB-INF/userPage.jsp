@@ -25,6 +25,7 @@
 		<div class="row">
 			<div class="col form-box p-3 m-2">
 				<h2>About me</h2>
+				<button type="submit" class="btn btn-primary">edit</button>
 		</div>
 		</div>
 
