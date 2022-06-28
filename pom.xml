@@ -88,6 +88,17 @@
             <artifactId>jquery</artifactId>
             <version>3.6.0</version>
         </dependency>
+        <!-- DEPENDENCIES FOR CLOUDINARY -->
+        <dependency>
+        	<groupId>com.cloudinary</groupId>
+	        <artifactId>cloudinary-http44</artifactId>
+	        <version>1.32.2</version>
+	    </dependency>
+	    <dependency>
+		   <groupId>com.cloudinary</groupId>
+		   <artifactId>cloudinary-taglib</artifactId>
+		   <version>1.32.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>

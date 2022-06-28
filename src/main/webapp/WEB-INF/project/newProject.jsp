@@ -24,7 +24,7 @@
 		<header><h1><b>Add Project</b></h1></header>
 		<div class="row">
 			<div class="col-6">
-				<form:form method="post" modelAttribute="newProject" action="/project/new">
+				<form:form method="post" modelAttribute="newProject" action="/project/new" enctype="multipart/form-data">
 					<div class="mb-4">
 						<form:label class="form-label" path="title"><b>Title</b></form:label>
 						<form:input class="form-control" path="title"/>
@@ -40,15 +40,20 @@
 						<form:textarea class="form-control" path="content"></form:textarea>
 						<form:errors class="text-danger" path="content"/>
 					</div>
+					<div class="mb-4">
+						<form:label class="form-label" path="file"><b>Upload Image</b></form:label>
+						<form:input class="form-control" name="fileInput" type="file" path="file"/>
+					</div>
 					<div class="mb-4 row">
 						<div class="col">
 							<button class="w-100 btn btn-primary" type="submit">Submit</button>
 						</div>
 						<div class="col">
-							<a class="w-100 btn btn-outline-danger" href="/home">Cancel</a>
+							<a class="w-100 btn btn-outline-danger" href="/">Cancel</a>
 						</div>
 					</div>
 				</form:form>
+			
 			</div>
 		</div>
 	</div>
