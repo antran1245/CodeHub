@@ -13,11 +13,12 @@
     <meta charset="UTF-8">
     <title>Swag Muney Ghang Ghang</title>
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/main.css"> <!-- change to match your file/naming structure -->
+    <link rel="stylesheet" href="/css/userPage.css"> <!-- change to match your file/naming structure -->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+<jsp:include page="background.jsp"></jsp:include>
 <div class="container">
 		<header class="row">
 				<h1 class="heading-text">CodeHub</h1>

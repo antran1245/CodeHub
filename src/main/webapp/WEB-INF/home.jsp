@@ -20,6 +20,7 @@
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+<jsp:include page="background.jsp"></jsp:include>
 	<div class="container-fluid p-0">
 		<nav class="navbar navbar-light bg-light justify-content-around p-0">
 			<a class="navbar-brand m-0" href=""><h1><b>CodeHub</b></h1></a>

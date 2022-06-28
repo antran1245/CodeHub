@@ -11,4 +11,9 @@ public class HomeController {
 	public String home() {
 		return "home.jsp";
 	}
+	
+	@GetMapping("/bg")
+	public String bg() {
+		return "background.jsp";
+	}
 }
