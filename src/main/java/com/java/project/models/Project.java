@@ -32,6 +32,8 @@ public class Project {
 	@NotEmpty(message="Content is required!")
 	private String content;
 	
+	private String image;
+	
 	@Column(updatable=false)
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date createdAt; 
@@ -101,6 +103,14 @@ public class Project {
 
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}	
 	
 }
