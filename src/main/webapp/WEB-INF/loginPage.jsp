@@ -20,10 +20,19 @@
 	<jsp:include page="background.jsp"></jsp:include>
 </head>
 <body>
-	<div class="container">
-		<header class="row">
-				<h1 class="heading-text">CodeHub</h1>
+
+		<header class="top">
+			<div class="an">
+			
+					<a href="/home"><span>CodeHub</span></a>
+			</div>
+			<div class="tran">
+					<p> right</p>
+			</div>
 		</header>
+
+	<div class="container">
+		
 		<div class="row">
 			<div class="col form-box p-3 m-2">
 				<h2>Register</h2>
@@ -54,7 +63,7 @@
 						<form:input type="password" path="confirmPassword" class="form-control"/>
 						<form:errors path="confirmPassword" class="text-danger"/>
 					</div>
-					<button type="submit" class="btn btn-primary">Sign Up</button>
+					<button type="submit" class="glow-on-hover">Sign Up</button>
 				</form:form>
 			</div>
 			<div class="col form-box p-3 m-2">
@@ -70,7 +79,7 @@
 						<form:input type="password" path="password" class="form-control"/>
 						<form:errors path="password" class="text-danger"/>
 					</div>
-					<button type="submit" class="btn btn-primary">Log in</button>
+					<button type="submit" class="glow-on-hover">Log in</button>
 				</form:form>
 			</div>
 		</div>

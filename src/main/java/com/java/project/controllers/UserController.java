@@ -1,6 +1,7 @@
 package com.java.project.controllers;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,12 +24,9 @@ public class UserController {
 
 //	========================== DISPLAY ======================================
 	@GetMapping("/login")
-	public String index(Model model, HttpSession sesh) {
+	public String index(Model model) {
 		model.addAttribute("newUser", new User());
-		model.addAttribute("newLogin", new LoginUser());
-		if(sesh.getAttribute("uuid") !=null) {
-			return "redirect:/home";
-		}
+		model.addAttribute("newLogin", new LoginUser());			
 		return "loginPage.jsp";
 	}
 	
@@ -60,7 +58,7 @@ public class UserController {
 	
 //	Register
 	@PostMapping("/reg")
-	public String register(@ModelAttribute("newUser") User registerUser, BindingResult result, Model model, HttpSession session) {
+	public String register(@Valid @ModelAttribute("newUser") User registerUser, BindingResult result, Model model, HttpSession session) {
 		User user = userServ.register(registerUser, result);
 		if(result.hasErrors()) {
 			model.addAttribute("newLogin", new LoginUser());
@@ -71,14 +69,14 @@ public class UserController {
 	}
 //	Login
 	@PostMapping("/login")
-	public String login(@ModelAttribute("newLogin") LoginUser loginUser, BindingResult result, Model model, HttpSession session) {
+	public String login(@Valid @ModelAttribute("newLogin") LoginUser loginUser, BindingResult result, Model model, HttpSession session) {
 		User user = userServ.login(loginUser, result);
 		if(result.hasErrors()) {
 			model.addAttribute("newUser", new User());
 			return "loginPage.jsp";
 		}
 		session.setAttribute("uuid", user.getId());
-		return "redirect:user";
+		return "redirect:/";
 	}
 }
 	
