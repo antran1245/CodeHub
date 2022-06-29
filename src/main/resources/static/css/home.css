@@ -8,9 +8,6 @@
 }
 
 header {
-	position: fixed;
-	top:0;
-	left:0;
 	width:100%;
 	display: flex;
 	justify-content: space-between;
@@ -62,3 +59,6 @@ header.sticky li a {
 	
 }
 
+.project-overlay {
+	background-color: rgba(0,0,0, .9);
+}

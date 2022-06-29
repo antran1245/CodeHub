@@ -19,7 +19,8 @@ public class HomeController {
 //	======================= Display ==========================
 	@GetMapping("/")
 	public String home(Model model) {
-		List<Project> projects = projectService.allProjects(); 
+		List<Project> projects = projectService.allProjects();
+		model.addAttribute("projects", projects);
 		return "home.jsp";
 	}
 	
