@@ -47,7 +47,10 @@ public class ProjectController {
 	
 //	======================== Display ===========================
 	@GetMapping("/project/new")
-	public String newProject(Model model) {
+	public String newProject(Model model, HttpSession session) {
+		if(session.getAttribute("uuid") == null) {
+			return "redirect:/login";
+		}
 		model.addAttribute("newProject", new UploadProject());
 		return "/project/newProject.jsp";
 	}
@@ -60,7 +63,10 @@ public class ProjectController {
 	}
 	
 	@GetMapping("/project/{id}/edit")
-	public String editProject(@PathVariable("id") Long id, Model model) {
+	public String editProject(@PathVariable("id") Long id, Model model, HttpSession session) {
+		if(session.getAttribute("uuid") == null) {
+			return "redirect:/login";
+		}
 		Project project = projectService.getProject(id);
 		model.addAttribute("editProject", project);
 		return "/project/editProject.jsp";
@@ -72,7 +78,7 @@ public class ProjectController {
 		if(result.hasErrors()) {
 			return "/project/newProject.jsp";
 		}
-		if(session.getAttribute("uuid") != null) {
+		if(session.getAttribute("uuid") == null) {
 			return "redirect:/login";
 		}
 		Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
@@ -101,6 +107,7 @@ public class ProjectController {
 		p.setTitle(project.getTitle());
 		p.setCaption(project.getCaption());
 		p.setContent(project.getContent());
+		p.setUser(user);
 		
 		projectService.save(p);
 		return "redirect:/";
