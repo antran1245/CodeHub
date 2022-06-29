@@ -1,23 +1,25 @@
 package com.java.project.models;
 
 import java.util.Date;
+import java.util.List;
 
-
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
-
 
 @Entity
 @Table(name="users")
@@ -45,9 +47,9 @@ public class User {
 	@Size(min=2, message="Password must be at least 2 char long")
 	private String password;
 	
-	
+	@Transient
 	@NotEmpty(message="Please confirm password")
-	@Size(min=2, message="Confirm Password must match")
+	@Size(min=2, message="Password must be at least 2 char long")
 	private String confirmPassword;
 	
 	private String about;
@@ -58,6 +60,8 @@ public class User {
 	
 //	=== Relationship ===================================================================
 	
+	@OneToMany(mappedBy="user", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	private List<Project> projects;
 	
 //	=== Created at, Updated at ===================================================
 	@Column(updatable=false)
@@ -167,6 +171,14 @@ public class User {
 
 	public void setLinkedin(String linkedin) {
 		this.linkedin = linkedin;
+	}
+
+	public List<Project> getProjects() {
+		return projects;
+	}
+
+	public void setProjects(List<Project> projects) {
+		this.projects = projects;
 	}
 	
 
