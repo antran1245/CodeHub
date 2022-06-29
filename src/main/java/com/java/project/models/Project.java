@@ -4,9 +4,12 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -39,6 +42,12 @@ public class Project {
 	private Date createdAt; 
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date updatedAt;
+	
+//	======================= Relationships ========================
+	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="user_id")
+	private User user;
 	
 //	======================= Constructor ==========================
 	
@@ -111,6 +120,14 @@ public class Project {
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}	
 	
 }

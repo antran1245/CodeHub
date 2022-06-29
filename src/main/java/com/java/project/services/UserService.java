@@ -52,7 +52,7 @@ public class UserService {
 		return null;
 	}
 	
-//	FIND USER BY ID
+//	 =========================== FIND USER BY ID =========================================
 	 public User findUser(Long id) {
 	        Optional<User> optionalUser = userRepo.findById(id);
 	        if(optionalUser.isPresent()) {

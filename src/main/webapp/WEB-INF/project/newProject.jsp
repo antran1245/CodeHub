@@ -42,8 +42,7 @@
 					</div>
 					<div class="mb-4">
 						<form:label class="form-label" path="file"><b>Upload Image</b> (10MB max)</form:label>
-						<form:input class="form-control" type="file" path="file"/>
-						<form:errors class="text-danger" path="file"/>
+						<form:input class="form-control" type="file" path="file" onChange="checkFileSize(this)"/>
 					</div>
 					<div class="mb-4 row">
 						<div class="col">
@@ -54,9 +53,9 @@
 						</div>
 					</div>
 				</form:form>
-			
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="/js/form.js"></script>
 </body>
 </html>

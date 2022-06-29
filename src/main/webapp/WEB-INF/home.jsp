@@ -21,12 +21,14 @@
 </head>
 <body>
 <jsp:include page="background.jsp"></jsp:include>
+
 	<div>
 		<header>
-				<a href="/home" class="logo">CodeHub</a>
-				<ul>
-					<li>
-						<a href="/project/new">Create a Post</a>
+				<a href="/home" class="logo">CodeHub</a>		
+				<ul class="navbar-nav mx-1 d-flex justify-content-end flex-row">
+					<li class="nav-item mx-1">
+						<a class="btn btn-outline-primary" href="/project/new">Create a Post</a>
+
 					</li>
 					<li>
 						<a href="/login">Login/Sign Up</a>

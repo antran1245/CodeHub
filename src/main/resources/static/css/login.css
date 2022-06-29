@@ -1,0 +1,9 @@
+.form-box {
+	background-color: white;
+}
+body {
+	z-index: -1;
+}
+.form-box, .heading-text {
+	z-index: 1;
+}

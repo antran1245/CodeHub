@@ -5,7 +5,10 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.java.project.models.LoginUser;
 import com.java.project.models.User;
@@ -52,27 +55,31 @@ public class UserController {
 //		sesh.removeAttribute("uuid");
 //		return "redirect:/";
 //	}
-//	
 	
+//	=========================== Action ================================
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+//	Register
+	@PostMapping("/reg")
+	public String register(@ModelAttribute("newUser") User registerUser, BindingResult result, Model model, HttpSession session) {
+		User user = userServ.register(registerUser, result);
+		if(result.hasErrors()) {
+			model.addAttribute("newLogin", new LoginUser());
+			return "loginPage.jsp";
+		}
+		session.setAttribute("uuid", user.getId());
+		return "redirect:/user";
+	}
+//	Login
+	@PostMapping("/login")
+	public String login(@ModelAttribute("newLogin") LoginUser loginUser, BindingResult result, Model model, HttpSession session) {
+		User user = userServ.login(loginUser, result);
+		if(result.hasErrors()) {
+			model.addAttribute("newUser", new User());
+			return "loginPage.jsp";
+		}
+		session.setAttribute("uuid", user.getId());
+		return "redirect:user";
+	}
 }
+	
 	

@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,9 @@ import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
 import com.java.project.models.Project;
 import com.java.project.models.UploadProject;
+import com.java.project.models.User;
 import com.java.project.services.ProjectService;
+import com.java.project.services.UserService;
 
 @Controller
 @PropertySource("classpath:application-dev.properties")
@@ -31,6 +34,9 @@ import com.java.project.services.ProjectService;
 public class ProjectController {
 	@Autowired
 	private ProjectService projectService;
+	
+	@Autowired
+	private UserService userService;
 	
 	@Value("${apiKey}")
 	private String apiKey;
@@ -62,16 +68,13 @@ public class ProjectController {
 //	========================== Action ===========================
 	@SuppressWarnings("rawtypes")
 	@PostMapping(value="/project/new")
-	public String createProject(@Valid @ModelAttribute("newProject") UploadProject project, BindingResult result) throws IOException {
-		if(project.getFile() != null && !project.getFile().isEmpty()) {
-			if(project.getFile().getSize() > 10485760) {
-				result.rejectValue("file", "Max size", "Over the max file size.");
-			}
+	public String createProject(@Valid @ModelAttribute("newProject") UploadProject project, BindingResult result, HttpSession session) throws IOException {
+		if(result.hasErrors()) {
+			return "/project/newProject.jsp";
 		}
-//		if(result.hasErrors()) {
-//			return "/project/newProject.jsp";
-//		}
-		
+		if(session.getAttribute("uuid") != null) {
+			return "redirect:/login";
+		}
 		Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
 				"cloud_name", cloudName,
 				"api_key", apiKey,
@@ -79,6 +82,7 @@ public class ProjectController {
 				"secure", true));
 		
 		Project p = new Project();
+		User user = userService.findUser((Long)session.getAttribute("uuid"));
 		
 		Map uploadResult = null;
 		if(project.getFile() != null && !project.getFile().isEmpty()) {
@@ -98,7 +102,7 @@ public class ProjectController {
 		p.setCaption(project.getCaption());
 		p.setContent(project.getContent());
 		
-//		projectService.save(p);
+		projectService.save(p);
 		return "redirect:/";
 	}
 	@PutMapping("/project/{id}/edit")
