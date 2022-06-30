@@ -1,2 +1,5 @@
 @charset "ISO-8859-1";
 
+body * {
+	z-index: 1;
+}

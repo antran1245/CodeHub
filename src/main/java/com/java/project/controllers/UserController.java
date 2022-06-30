@@ -41,8 +41,12 @@ public class UserController {
 	
 	
 	@GetMapping("/user")
-	public String test(Model model) {
-		model.addAttribute("user", new User());
+	public String test(Model model, HttpSession session) {
+		if(session.getAttribute("uuid") == null) {
+			return "redirect:/login";
+		}
+		User user = userServ.findUser((Long) session.getAttribute("uuid"));
+		model.addAttribute("user", user);
 		return "userPage.jsp";
 	}
 ////	
