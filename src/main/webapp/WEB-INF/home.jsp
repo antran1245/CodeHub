@@ -22,10 +22,7 @@
 </head>
 <body>
 <jsp:include page="background.jsp"></jsp:include>
-
-	<div>
-		<header>
-				<a href="/home" class="logo">CodeHub</a>		
+<!--  <a href="/home" class="logo">CodeHub</a>		
 				<ul class="navbar-nav mx-1 d-flex justify-content-end flex-row">
 					<li class="nav-item mx-1">
 						<a class="btn btn-outline-primary" href="/project/new">Create a Post</a>
@@ -44,16 +41,35 @@
 							</div>
 						</form>
 					</li>
-				</ul>
-		</header>
-		
+				</ul>-->
+				
+	<div class="fixed-nav-bar">		
+				<div class="logo"><span>CodeHub</span></div>
+    				<input type="checkbox" id="menuButton" />
+    					<label for="menuButton" class="menu-button-label">
+        					<div class="white-bar"></div>
+        					<div class="white-bar"></div>
+        					<div class="white-bar"></div>
+        					<div class="white-bar"></div>
+    					</label>				
 	</div>
-	<div class="container">
-	<div class="project-overlay">
-		<div class="row d-flex justify-content-evenly">
+	
+<div class="the-bass">
+    	<div class="rela-block drop-down-container">
+        	<div class="drop-down-item"><a href="/project/new">Create</a></div>
+    	</div>
+    	<div class="rela-block drop-down-container">
+        	<div class="drop-down-item"><a href="/login">Login/Sign Up</a></div>
+    	</div>
+    	<div class="rela-block drop-down-container">
+        	<div class="drop-down-item"></div>
+    	</div>
+</div>
+	<div class="parent">
+		<div class="child">
 			<c:forEach var="project" items="${projects}">
-				<div class="col-5 card bg-dark text-white my-4">
-					<img class="card-img" src="${project.getImage()}" alt="${project.getTitle()}"  width="auto" height="300"/>
+				<div class="card">
+					<img class="card-img" src="${project.getImage()}" alt="${project.getTitle()}"  width="350" height="350"/>
 					<div class="card-img-overlay flex-column justify-content-between" style="display:none">
 						<h3 class="card-title">Title: <c:out value="${project.getTitle()}"/></h3>
 						<p class="card-text"><c:out value="${project.getCaption()}"/></p>
@@ -62,19 +78,30 @@
 			</c:forEach>
 		</div>
 	</div>
-	</div>
 	<script type="text/javascript">
-		window.addEventListener("scroll", function(){
-			var header = document.querySelector("header");
-			header.classList.toggle("sticky", window.scrollY > 0);
-		})
-		$(document).ready(function() {
-			$(".card").hover(function(){
-				$(this).find("div").css("display", "flex");
-			}, function() {
-				$(this).find("div").css("display", "none");
-			})
-		})
+	$( document ).ready(function() {
+	    
+	    // Function to change the nav-bar on scroll
+	    $(window).scroll(function(){
+	        ($(window).scrollTop() >= 100) ? (
+	            $('.fixed-nav-bar').addClass('scrolled'),
+	            $('.the-bass').addClass('scrolled')
+	        ) : (
+	            $('.fixed-nav-bar').removeClass('scrolled'),
+	            $('.the-bass').removeClass('scrolled')
+	        );
+	    });
+	    
+	    // Drop Down Function
+	    $('#menuButton').on('change', function(){
+	        ($('#menuButton').is(':checked')) ? (
+	            $('.the-bass').addClass('dropped')
+	        ) : (
+	            $('.the-bass').removeClass('dropped')
+	        );
+	    });
+	    
+	});
 	</script>
 </body>
 </html>

@@ -98,7 +98,7 @@ public class ProjectController {
 			params.put("timestamp", timestamp);
 			params.put("public_id", project.getTitle());
 			params.put("folder", "java");
-			
+
 			uploadResult = cloudinary.uploader().upload(project.getFile().getBytes(),
 					params);
 			p.setImage((String) uploadResult.get("url"));
@@ -108,7 +108,6 @@ public class ProjectController {
 		p.setCaption(project.getCaption());
 		p.setContent(project.getContent());
 		p.setUser(user);
-		
 		projectService.save(p);
 		return "redirect:/";
 	}
