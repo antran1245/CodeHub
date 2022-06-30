@@ -69,7 +69,7 @@ public class UserController {
 			return "loginPage.jsp";
 		}
 		session.setAttribute("uuid", user.getId());
-		return "redirect:/user";
+		return "redirect:/";
 	}
 //	Login
 	@PostMapping("/login")
