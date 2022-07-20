@@ -25,9 +25,9 @@
 			<img src="https://via.placeholder.com/150" alt="placeholder"/>
 		</div>
 		<div class="row">
-			<h1><c:out value="${project.getTitle()}"/></h1>
+			<%-- <h1><c:out value="${project.getTitle()}"/></h1>
 			<p><c:out value="${project.getCaption()}"/></p>
-			<p><c:out value="${project.getContent()}"/></p>
+			<p><c:out value="${project.getContent()}"/></p> --%>
 		</div>
 		<div class="row">
 			<h4>Comments</h4>

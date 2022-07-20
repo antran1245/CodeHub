@@ -52,11 +52,11 @@ public class UserController {
 ////	
 	
 	
-//	@GetMapping("/logout")
-//	public String logout(HttpSession sesh) {
-//		sesh.removeAttribute("uuid");
-//		return "redirect:/";
-//	}
+	@GetMapping("/logout")
+	public String logout(HttpSession sesh) {
+		sesh.removeAttribute("uuid");
+		return "redirect:/";
+	}
 	
 //	=========================== Action ================================
 	

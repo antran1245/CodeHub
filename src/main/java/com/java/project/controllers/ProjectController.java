@@ -71,7 +71,7 @@ public class ProjectController {
 		model.addAttribute("editProject", project);
 		return "/project/editProject.jsp";
 	}
-//	========================== Action ===========================
+	//	========================== Action ===========================
 	@SuppressWarnings("rawtypes")
 	@PostMapping(value="/project/new")
 	public String createProject(@Valid @ModelAttribute("newProject") UploadProject project, BindingResult result, HttpSession session) throws IOException {
