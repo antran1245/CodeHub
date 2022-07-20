@@ -14,16 +14,26 @@
     <title>New Project</title>
     <!-- for Bootstrap CSS -->
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css"> <!-- change to match your file/naming structure -->
+    <link rel="stylesheet" href="/css/newProject.css"> <!-- change to match your file/naming structure -->
     <!-- For any Bootstrap that uses JS or jQuery-->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <jsp:include page="/WEB-INF/background.jsp"></jsp:include>
 </head>
 <body>
+<header class="top">
+			<div class="an">
+			
+					<a href="/"><span>CodeHub</span></a>
+			</div>
+			<div class="tran">
+					<p> right</p>
+			</div>
+		</header>
 	<div class="container">
-		<header><h1><b>Add Project</b></h1></header>
+				<div class="pageName">Add Project</div>
 		<div class="row">
-			<div class="col-6">
+			<div class="form-box">
 				<form:form method="post" modelAttribute="newProject" action="/project/new" enctype="multipart/form-data">
 					<div class="mb-4">
 						<form:label class="form-label" path="title"><b>Title</b></form:label>
@@ -45,12 +55,12 @@
 						<form:input class="form-control" type="file" path="file" onChange="checkFileSize(this)"/>
 					</div>
 					<div class="mb-4 row">
-						<div class="col">
-							<button class="w-100 btn btn-primary" type="submit">Submit</button>
-						</div>
-						<div class="col">
+					<div class="col">
 							<a class="w-100 btn btn-outline-danger" href="/">Cancel</a>
 						</div>
+						<div class="col">
+							<button class="w-100 btn btn-primary" type="submit">Submit</button>
+						</div>						
 					</div>
 				</form:form>
 			</div>

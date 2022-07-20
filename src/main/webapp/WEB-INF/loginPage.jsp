@@ -24,7 +24,7 @@
 		<header class="top">
 			<div class="an">
 			
-					<a href="/home"><span>CodeHub</span></a>
+					<a href="/"><span>CodeHub</span></a>
 			</div>
 			<div class="tran">
 					<p> right</p>
