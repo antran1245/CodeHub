@@ -101,6 +101,13 @@
 	        );
 	    });
 	    
+	    //hover
+		$(".card").hover(function() {
+			$(this).find("div").css("display", "flex");
+		},
+		function(){
+			$(this).find("div").css("display", "none");
+		})
 	});
 	</script>
 </body>
