@@ -14,23 +14,28 @@
     <title>Detail Project</title>
     <!-- for Bootstrap CSS -->
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/main.css"> <!-- change to match your file/naming structure -->
+    <link rel="stylesheet" href="/css/detailProject.css">
+    <link rel="stylesheet" href="/css/nav.css"> 
     <!-- For any Bootstrap that uses JS or jQuery-->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	<jsp:include page="/WEB-INF/background.jsp"></jsp:include>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<img src="https://via.placeholder.com/150" alt="placeholder"/>
-		</div>
-		<div class="row">
-			<%-- <h1><c:out value="${project.getTitle()}"/></h1>
-			<p><c:out value="${project.getCaption()}"/></p>
-			<p><c:out value="${project.getContent()}"/></p> --%>
-		</div>
-		<div class="row">
-			<h4>Comments</h4>
+	<div class="container-fluid">
+	<jsp:include page="/WEB-INF/nav.jsp"></jsp:include>
+		<div class="container">
+			<div class="row">
+				<img src="${project.getImage()}" alt="${project.getTitle()}" height="auto"/>
+			</div>
+			<div class="row info">
+				<h1><c:out value="${project.getTitle()}"/></h1>
+				<p><c:out value="${project.getCaption()}"/></p>
+				<p><c:out value="${project.getContent()}"/></p>
+			</div>
+			<div class="row">
+				<h4>Comments</h4>
+			</div>
 		</div>
 	</div>
 </body>
