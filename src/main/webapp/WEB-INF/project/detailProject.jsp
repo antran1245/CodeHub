@@ -36,6 +36,20 @@
 			<div class="row">
 				<h4>Comments</h4>
 			</div>
+			<div class="row">
+				<!-- All project by same user -->
+				<c:forEach var="project" items="${projects}">
+					<div class="card">
+					<a href="/project/${project.id}/detail">
+						<img class="card-img" src="${project.getImage()}" alt="${project.getTitle()}"  width="290" height="290"/>
+						<div class="card-body flex-column justify-content-between" style="display:none">
+							<h3 class="card-title"> <c:out value="${project.getTitle()}"/></h3>
+							<p class="card-text"><c:out value="${project.getCaption()}"/></p>
+						</div>
+					</a>
+				</div>
+				</c:forEach>
+			</div>
 		</div>
 	</div>
 </body>

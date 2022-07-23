@@ -3,6 +3,7 @@ package com.java.project.controllers;
 import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
@@ -58,6 +59,13 @@ public class ProjectController {
 	@GetMapping("/project/{id}/detail")
 	public String detailProject(@PathVariable("id") Long id, Model model) {
 		Project project = projectService.getProject(id);
+		
+		User user = project.getUser();
+		if(user != null) {
+			List<Project> projects = projectService.allProjectsByUser(project.getUser().getId(), id);
+			model.addAttribute("projects", projects);			
+		}
+		
 		model.addAttribute("project", project);
 		return "/project/detailProject.jsp";
 	}

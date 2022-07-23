@@ -31,4 +31,9 @@ public class ProjectService {
 	public void deleteProject(Long id) {
 		projectRepo.deleteById(id);
 	}
+	
+//	=============== Find all projects by one user ==============
+	public List<Project> allProjectsByUser(Long userId, Long projectId) {
+		return projectRepo.findAllByUserId(userId, projectId);
+	}
 }
