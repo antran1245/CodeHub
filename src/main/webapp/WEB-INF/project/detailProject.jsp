@@ -24,7 +24,7 @@
 <body>
 	<div class="container-fluid">
 	<jsp:include page="/WEB-INF/nav.jsp"></jsp:include>
-		<div class="container">
+		<main class="container">
 			<div class="row">
 				<img src="${project.getImage()}" alt="${project.getTitle()}" height="auto"/>
 			</div>
@@ -34,23 +34,35 @@
 				<p><c:out value="${project.getContent()}"/></p>
 			</div>
 			<div class="row">
-				<h4>Comments</h4>
+				<h4>Other Projects From Same User</h4>
+			</div>
+			<div class="row project_list">
+				<div class="list">
+					<div class="row">
+						<div class="overlay"></div>
+					</div>
+					<div class="row">
+					<!-- All project by same user -->
+					<c:forEach var="project" items="${projects}">
+						<div class="col-sm-6 col-lg-4 mt-1">
+							<div class="card">
+								<a href="/project/${project.id}/detail">
+									<img class="card-img-top" src="${project.getImage()}" alt="${project.getTitle()}"  width="290" height="290"/>
+								</a>
+								<div class="card-body flex-column justify-content-between">
+									<h3 class="card-title">Title: <c:out value="${project.getTitle()}"/></h3>
+									<p class="card-text"><c:out value="${project.getCaption()}"/></p>
+								</div>
+							</div>
+						</div>
+					</c:forEach>
+					</div>
+				</div>
 			</div>
 			<div class="row">
-				<!-- All project by same user -->
-				<c:forEach var="project" items="${projects}">
-					<div class="card">
-					<a href="/project/${project.id}/detail">
-						<img class="card-img" src="${project.getImage()}" alt="${project.getTitle()}"  width="290" height="290"/>
-						<div class="card-body flex-column justify-content-between" style="display:none">
-							<h3 class="card-title"> <c:out value="${project.getTitle()}"/></h3>
-							<p class="card-text"><c:out value="${project.getCaption()}"/></p>
-						</div>
-					</a>
-				</div>
-				</c:forEach>
+				<h4>Comments</h4>
 			</div>
-		</div>
+		</main>
 	</div>
 </body>
 </html>

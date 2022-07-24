@@ -1,8 +1,39 @@
 @charset "ISO-8859-1";
 
+*::-webkit-scrollbar {
+	display: none;
+}
+* {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
 .container {
 	z-index: 1;
 	color: white;
 	position: relative;
 	background-color: transparent;
+}
+.container > .row:nth-child(1) {
+	padding-top: 150px
+}
+
+.project_list .list {
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+.overlay {
+	background-color: rgba(255,255,255,0.2);
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	height: 100%;
+	padding: 0;
+	width:98%;
+}
+
+.card {
+	color: black;
 }
