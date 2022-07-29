@@ -22,8 +22,8 @@
 	<jsp:include page="/WEB-INF/background.jsp"></jsp:include>
 </head>
 <body>
+<jsp:include page="/WEB-INF/nav.jsp"></jsp:include>
 	<div class="container-fluid">
-	<jsp:include page="/WEB-INF/nav.jsp"></jsp:include>
 		<main class="container">
 			<div class="row">
 				<img src="${project.getImage()}" alt="${project.getTitle()}" height="auto"/>
@@ -39,23 +39,22 @@
 			<div class="row project_list">
 				<div class="list">
 					<div class="row">
-						<div class="overlay"></div>
+						<div id="overlay"></div>
 					</div>
 					<div class="row">
-					<!-- All project by same user -->
-					<c:forEach var="project" items="${projects}">
-						<div class="col-sm-6 col-lg-4 mt-1">
-							<div class="card">
-								<a href="/project/${project.id}/detail">
-									<img class="card-img-top" src="${project.getImage()}" alt="${project.getTitle()}"  width="290" height="290"/>
-								</a>
-								<div class="card-body flex-column justify-content-between">
-									<h3 class="card-title">Title: <c:out value="${project.getTitle()}"/></h3>
-									<p class="card-text"><c:out value="${project.getCaption()}"/></p>
+						<c:forEach var="project" items="${projects}">
+							<div class="col-sm-6 col-lg-4 mt-1">
+								<div class="card">
+									<a href="/project/${project.id}/detail">
+										<img class="card-img-top" src="${project.getImage()}" alt="${project.getTitle()}"  width="290" height="290"/>
+									</a>
+									<div class="card-body flex-column justify-content-between">
+										<h3 class="card-title">Title: <c:out value="${project.getTitle()}"/></h3>
+										<p class="card-text"><c:out value="${project.getCaption()}"/></p>
+									</div>
 								</div>
 							</div>
-						</div>
-					</c:forEach>
+						</c:forEach>
 					</div>
 				</div>
 			</div>
@@ -64,5 +63,18 @@
 			</div>
 		</main>
 	</div>
+	<script type="text/javascript">
+		const overlay = document.querySelector("#overlay")
+		const list = document.querySelector(".list")
+		$('#overlay').hover(function() {
+			overlay.innerHTML = '<p><b>Extend</b></p>'
+		}, function () {
+			overlay.innerHTML = ''
+		})
+		$('#overlay').click(function() {
+			overlay.style.display = 'none'
+			list.style.height = 'auto'
+		})
+	</script>
 </body>
 </html>
