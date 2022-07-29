@@ -41,6 +41,11 @@
 					<div class="row">
 						<div id="overlay"></div>
 					</div>
+					<div class="row overlay-btn">
+						<div class="col">
+							<button class="btn btn-primary w-100" onclick="closeOverlay()">Close</button>
+						</div>
+					</div>
 					<div class="row">
 						<c:forEach var="project" items="${projects}">
 							<div class="col-sm-6 col-lg-4 mt-1">
@@ -64,8 +69,11 @@
 		</main>
 	</div>
 	<script type="text/javascript">
+		//Extend the project list to height auto
 		const overlay = document.querySelector("#overlay")
 		const list = document.querySelector(".list")
+		const overlay_button = document.querySelector(".overlay-btn .col button")
+		
 		$('#overlay').hover(function() {
 			overlay.innerHTML = '<p><b>Extend</b></p>'
 		}, function () {
@@ -74,7 +82,15 @@
 		$('#overlay').click(function() {
 			overlay.style.display = 'none'
 			list.style.height = 'auto'
+			overlay_button.style.display = 'block'
 		})
+		
+		//close button
+		function closeOverlay() {
+			overlay.style.display = 'flex'
+			list.style.height = '200px'
+			overlay_button.style.display = 'none'
+		}
 	</script>
 </body>
 </html>
