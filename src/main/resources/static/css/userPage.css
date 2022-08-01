@@ -9,7 +9,7 @@
 }
 
 .fixed-nav-bar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -192,41 +192,41 @@ a:hover, a:active {
 }
 
 
-.parent {
+
+.all {
+	padding-top: 200;
+	background-color: rgb(0, 0, 0);
 	margin-bottom: 200px;
   	margin-right: 200px;
   	margin-left: 200px;
-	opacity: 0.9;
-}
-
-
-
-.child {
-	padding-top: 55px;
-	padding-bottom: 25px;
-	background-color: rgb(0, 0, 0);
-	
-	border-radius: 15px;
+	z-index:2 !important;
+	position: relative;
 	display: flex;
 	justify-content: space-around;
-	flex-wrap: wrap;
-	
-	
+	color: #fff;
+	opacity: 0.9;
+	align-items: center;
 }
 
-.card {
-	padding-top: 50px;
-  	padding-right: 15px;
-  	padding-bottom: 50px;
-  	padding-left: 15px;
-  	margin-top: 70px;
-  	margin-bottom: 35px;
-  	margin-right: 25px;
-  	margin-left: 25px;
-  	opacity: 1 !important;
-  	
+about {
+  margin:20px;
+  background-color: #fafafa;
+  background:blue;
+flex-basis:66.66%;
+  
 }
-
-.card-title {
-	font-weight: 700;
+.info {	
+flex-basis:33.33%;
+}
+.info i {
+	color: #f7007b;
+}
+textarea {
+  width:100%;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  height:150px;
 }

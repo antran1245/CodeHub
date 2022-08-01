@@ -16,10 +16,9 @@
     <link rel="stylesheet" href="/css/userPage.css"> <!-- change to match your file/naming structure -->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <jsp:include page="background.jsp"></jsp:include>
 </head>
 <body>
-<jsp:include page="background.jsp"></jsp:include>
-
 	 <div class="fixed-nav-bar">		
 				<div class="logo"><span>CodeHub</span></div>
     				<input type="checkbox" id="menuButton" />
@@ -50,7 +49,24 @@
     	</div>
 </div>
  
-	<div class="parent">
+ 
+ <div class="all">
+
+ 	<div class="info">
+ 		<h1>Links</h1>
+ 		<p><i class="fa-brands fa-linkedin"></i>LinkedIn</p>
+ 		<p><i class="fa-brands fa-github"></i>GitHub</p>
+ 		<p><i class="fa-solid fa-envelope"></i>Email</p>
+ 		
+ 
+ 	</div>
+ 	<div class="about">
+ 		<h1>About</h1>
+ 		<textarea placeholder="About..."></textarea>
+	</div>
+ 
+ </div>
+	<%-- <div class="parent">
 		<div class="child">
 			<c:forEach var="project" items="${projects}">
 					<div class="card">
@@ -64,7 +80,7 @@
 					</div>
 			</c:forEach>
 		</div>
-	</div>
+	</div> --%>
  
 <!--  
 	<div class="container">
