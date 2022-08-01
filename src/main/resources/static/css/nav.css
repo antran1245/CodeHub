@@ -8,7 +8,7 @@
 }
 
 .fixed-nav-bar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -163,4 +163,27 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+a span {
+	color: #fff;
+	padding: 20px;
+	padding-top: 20px;
+	margin-top: 20px;
+}
+
+a span:hover {
+	color: #f7007b;
+}
+a:link {	
+	text-decoration: none;
+	color: #fff;
+}
+a:active {
+  text-decoration: underline;
+}
+a:hover, a:active {
+  transition: 0s;
+	color: #f7007b;
+	text-shadow: 0 0 120px #f7007b;
 }
