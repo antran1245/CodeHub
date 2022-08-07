@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.java.project.models.LoginUser;
@@ -38,8 +39,6 @@ public class UserController {
 //		}		
 //		return "home.jsp";
 //	}
-	
-	
 	@GetMapping("/user")
 	public String test(Model model, HttpSession session) {
 		if(session.getAttribute("uuid") == null) {
@@ -47,6 +46,20 @@ public class UserController {
 		}
 		User user = userServ.findUser((Long) session.getAttribute("uuid"));
 		model.addAttribute("user", user);
+		return "userPage.jsp";
+	}
+	
+	@GetMapping("/user/{id}")
+	public String userPage(Model model, HttpSession session, @PathVariable(value="id") Long id) {
+		if(session.getAttribute("uuid") == null) {
+			return "redirect:/login";
+		}
+		User user = userServ.findUser((Long) session.getAttribute("uuid"));
+		model.addAttribute("user", user);
+		if(id != null) {
+			User profileUser = userServ.findUser(id);
+			model.addAttribute("profileUser", profileUser);
+		}
 		return "userPage.jsp";
 	}
 ////	

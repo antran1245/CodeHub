@@ -13,42 +13,14 @@
     <meta charset="UTF-8">
     <title>User Page</title>
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/userPage.css"> <!-- change to match your file/naming structure -->
+    <link rel="stylesheet" href="/css/userPage.css">
+    <link rel="stylesheet" href="/css/nav.css"> 
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
     <jsp:include page="background.jsp"></jsp:include>
 </head>
 <body>
-	 <div class="fixed-nav-bar">		
-				<div class="logo"><span>CodeHub</span></div>
-    				<input type="checkbox" id="menuButton" />
-    					<label for="menuButton" class="menu-button-label">
-        					<div class="white-bar"></div>
-        					<div class="white-bar"></div>
-        					<div class="white-bar"></div>
-        					<div class="white-bar"></div>
-    					</label>				
-	</div>
-	
-<div class="the-bass">
-    	<div class="rela-block drop-down-container">
-        	<div class="drop-down-item"><a href="/project/new"><span>Create</span></a></div>
-    	</div>
-    	<div class="rela-block drop-down-container">
-    		<c:choose>
-	    		<c:when test="${empty user}">
-	    			<div class="drop-down-item"><a href="/login"><span>Login/ Sign Up</span></a></div>
-	    		</c:when>
-	    		<c:otherwise>
-		        	<div class="drop-down-item"><a href="/logout"><span>Logout</span></a></div>
-	    		</c:otherwise>
-    		</c:choose>
-    	</div>
-    	<div class="rela-block drop-down-container">
-        	<div class="drop-down-item"><a href="/user"><span>Profile</span></a></div>
-    	</div>
-</div>
- 
+	 <jsp:include page="/WEB-INF/nav.jsp"></jsp:include>
  
  <div class="all">
 
@@ -57,14 +29,11 @@
  		<p><i class="fa-brands fa-linkedin"></i>LinkedIn</p>
  		<p><i class="fa-brands fa-github"></i>GitHub</p>
  		<p><i class="fa-solid fa-envelope"></i>Email</p>
- 		
- 
  	</div>
  	<div class="about">
  		<h1>About</h1>
  		<textarea placeholder="About..."></textarea>
 	</div>
- 
  </div>
 	<%-- <div class="parent">
 		<div class="child">
