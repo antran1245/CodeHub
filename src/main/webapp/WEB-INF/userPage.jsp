@@ -48,13 +48,13 @@
 	<div class="row info" id="form-info" style="display: none">
  		<div class="col-12">
  			<h1>Info</h1>
- 			<form>
+ 			<form id="input-form">
 		 		<div class="form-group row">
 			 		<label class="col-form-label col-sm-1">
 			 			<i class="fa-brands fa-linkedin fa-2x"></i>
 			 		</label>
 			 		<div class="col-sm-11">
-				 		<input type="text" class="form-control"/>
+				 		<input type="text" id="linkedin" class="form-control"/>
 			 		</div>
 		 		</div>
 		 		<div class="form-group row">
@@ -62,7 +62,7 @@
 			 			<i class="fa-brands fa-github fa-2x"></i>
 		 			</label>
 		 			<div class="col-sm-11">
-		 				<input type="text" class="form-control"/>
+		 				<input type="text" id="github" class="form-control"/>
 		 			</div>
 		 		</div>
 		 		<div class="form-group row">
@@ -70,7 +70,7 @@
 			 			<i class="fa-solid fa-envelope fa-2x"></i>
 		 			</label>
 		 			<div class="col-sm-11">
-		 				<input type="text" class="form-control"/>
+		 				<input type="text" id="email" class="form-control"/>
 		 			</div>
 		 		</div>
  			</form>
@@ -130,12 +130,32 @@
 			ele.innerText = "Save"
 			$("#form-info").css("display", "flex")
 			$("#display-info").css("display", "none")
-		} else {
+			ele.removeAttribute("form")
+			ele.removeAttribute("type")
+		} else if(ele.innerText === "Save"){
+			ele.setAttribute("form", "input-form")
+			ele.setAttribute("type", "submit")
 			ele.innerText = "Edit"
-				$("#form-info").css("display", "none")
-				$("#display-info").css("display", "flex")
+			$("#form-info").css("display", "none")
+			$("#display-info").css("display", "flex")
 		}
 	}
+	
+	$("#input-form").submit(function(e) {
+		e.preventDefault()
+		let information = {}
+		information["linkedin"] = $("#linkedin").val()
+		information["github"] = $("#github").val()
+		information["email"] = $("#email").val()
+		information["aboutMe"] = $("#aboutMe").val()
+		$.ajax({
+			type: "PATCH",
+			contentType: "application/json",
+			url: "/user/info",
+			data: JSON.stringify(information),
+			dataType: 'json'
+		})
+	})
 	// hover over
 	 $(".card").hover(function() {
          $(this).find("div").css("display", "flex");

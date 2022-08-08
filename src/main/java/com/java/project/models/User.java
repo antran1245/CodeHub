@@ -48,8 +48,8 @@ public class User {
 	private String password;
 	
 	@Transient
-	@NotEmpty(message="Please confirm password")
 	@Size(min=2, message="Password must be at least 2 char long")
+	@Column(updatable = false)
 	private String confirmPassword;
 	
 	private String about;
