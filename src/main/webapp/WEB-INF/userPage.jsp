@@ -22,17 +22,28 @@
 <body>
 	 <jsp:include page="/WEB-INF/nav.jsp"></jsp:include>
  
- <div class="all">
-
- 	<div class="info">
- 		<h1>Links</h1>
- 		<p><i class="fa-brands fa-linkedin"></i>LinkedIn</p>
- 		<p><i class="fa-brands fa-github"></i>GitHub</p>
- 		<p><i class="fa-solid fa-envelope"></i>Email</p>
- 	</div>
- 	<div class="about">
- 		<h1>About</h1>
- 		<textarea placeholder="About..."></textarea>
+ <div class="container">
+	<div class="row d-flex align-items-center">
+		<div class="col">
+ 			<h1><c:out value="${profileUser.first_name}" /></h1>
+		</div>
+		<div class="col d-flex justify-content-end">
+	 		<c:if test= "${profileUser == user}">
+	 			<button type="button" class="btn btn-primary w-50">Edit</button>
+	 		</c:if>
+		</div>
+	</div>
+ 	<div class="row info">
+ 		<div class="col-12 col-sm-3">
+ 			<h1>Info</h1>
+	 		<p><i class="fa-brands fa-linkedin"></i>LinkedIn</p>
+	 		<p><i class="fa-brands fa-github"></i>GitHub</p>
+	 		<p><i class="fa-solid fa-envelope"></i>Email</p>
+ 		</div>
+	 	<div class="col-12 col-sm-9">
+	 		<h1>About</h1>
+	 		<textarea class="form-control" rows="3" placeholder="About..."></textarea>
+	 	</div>
 	</div>
  </div>
 	<%-- <div class="parent">
