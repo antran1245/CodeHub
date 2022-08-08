@@ -28,6 +28,10 @@ flex-basis:33.33%;
 .info i {
 	color: #f7007b;
 }
+
+input {
+	background-color: white;
+}
 textarea {
   border-radius:15px;
   border:0;

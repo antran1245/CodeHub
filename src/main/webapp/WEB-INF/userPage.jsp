@@ -29,11 +29,11 @@
 		</div>
 		<div class="col d-flex justify-content-end">
 	 		<c:if test= "${profileUser == user}">
-	 			<button type="button" class="btn btn-primary w-50">Edit</button>
+	 			<button type="button" class="btn btn-primary w-50" onclick="switchForm(this)">Edit</button>
 	 		</c:if>
 		</div>
 	</div>
- 	<div class="row info">
+ 	<div class="row info" id="display-info" style="display: flex">
  		<div class="col-12 col-sm-3">
  			<h1>Info</h1>
 	 		<p><i class="fa-brands fa-linkedin"></i>LinkedIn</p>
@@ -42,7 +42,42 @@
  		</div>
 	 	<div class="col-12 col-sm-9">
 	 		<h1>About</h1>
-	 		<textarea class="form-control" rows="3" placeholder="About..."></textarea>
+	 		<p>About myself</p>
+	 	</div>
+	</div>
+	<div class="row info" id="form-info" style="display: none">
+ 		<div class="col-12">
+ 			<h1>Info</h1>
+ 			<form>
+		 		<div class="form-group row">
+			 		<label class="col-form-label col-sm-1">
+			 			<i class="fa-brands fa-linkedin fa-2x"></i>
+			 		</label>
+			 		<div class="col-sm-11">
+				 		<input type="text" class="form-control"/>
+			 		</div>
+		 		</div>
+		 		<div class="form-group row">
+		 			<label class="col-form-label col-sm-1">
+			 			<i class="fa-brands fa-github fa-2x"></i>
+		 			</label>
+		 			<div class="col-sm-11">
+		 				<input type="text" class="form-control"/>
+		 			</div>
+		 		</div>
+		 		<div class="form-group row">
+		 			<label class="col-form-label col-sm-1">
+			 			<i class="fa-solid fa-envelope fa-2x"></i>
+		 			</label>
+		 			<div class="col-sm-11">
+		 				<input type="text" class="form-control"/>
+		 			</div>
+		 		</div>
+ 			</form>
+ 		</div>
+	 	<div class="col-12">
+	 		<h1>About</h1>
+	 		<textarea id="aboutMe" class="form-control" rows="3" placeholder="About..."></textarea>
 	 	</div>
 	</div>
  </div>
@@ -90,30 +125,17 @@
    </div>
     --> 
     <script type="text/javascript">
-	$( document ).ready(function() {
-	    
-	    // Function to change the nav-bar on scroll
-	    $(window).scroll(function(){
-	        ($(window).scrollTop() >= 100) ? (
-	            $('.fixed-nav-bar').addClass('scrolled'),
-	            $('.the-bass').addClass('scrolled')
-	        ) : (
-	            $('.fixed-nav-bar').removeClass('scrolled'),
-	            $('.the-bass').removeClass('scrolled')
-	        );
-	    });
-	    
-	    // Drop Down Function
-	    $('#menuButton').on('change', function(){
-	        ($('#menuButton').is(':checked')) ? (
-	            $('.the-bass').addClass('dropped')
-	        ) : (
-	            $('.the-bass').removeClass('dropped')
-	        );
-	    });
-	    
-	});
-	
+	function switchForm(ele) {
+		if(ele.innerText === "Edit") {
+			ele.innerText = "Save"
+			$("#form-info").css("display", "flex")
+			$("#display-info").css("display", "none")
+		} else {
+			ele.innerText = "Edit"
+				$("#form-info").css("display", "none")
+				$("#display-info").css("display", "flex")
+		}
+	}
 	// hover over
 	 $(".card").hover(function() {
          $(this).find("div").css("display", "flex");
