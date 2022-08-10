@@ -3,7 +3,6 @@ package com.java.project.models;
 public class ProfileInfo {
 	private String linkedin;
 	private String github;
-	private String email;
 	private String aboutMe;
 	
 	public String getLinkedin() {
@@ -17,12 +16,6 @@ public class ProfileInfo {
 	}
 	public void setGithub(String github) {
 		this.github = github;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
 	}
 	public String getAboutMe() {
 		return aboutMe;

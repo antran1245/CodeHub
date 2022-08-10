@@ -34,15 +34,34 @@
 		</div>
 	</div>
  	<div class="row info" id="display-info" style="display: flex">
- 		<div class="col-12 col-sm-3">
+ 		<div class="col-12 col-sm-4">
  			<h1>Info</h1>
-	 		<p><i class="fa-brands fa-linkedin"></i>LinkedIn</p>
-	 		<p><i class="fa-brands fa-github"></i>GitHub</p>
-	 		<p><i class="fa-solid fa-envelope"></i>Email</p>
+	 		<p>
+	 			<c:if test="${profileUser.linkedin != ' '}">
+	 				<i class="fa-brands fa-linkedin"></i>
+	 				<c:out value="${profileUser.linkedin}"/>
+	 			</c:if>
+	 		</p>
+	 		<p>
+	 			<c:if test="${profileUser.github != ' '}">
+			 		<i class="fa-brands fa-github"></i>
+			 		<c:out value="${profileUser.github}"/>
+	 			</c:if>
+	 		</p>
+	 		<p>
+	 			<c:if test="${profileUser.email != ' '}">
+		 			<i class="fa-solid fa-envelope"></i>
+		 			<c:out value="${profileUser.email}"/>
+	 			</c:if>
+	 		</p>
  		</div>
-	 	<div class="col-12 col-sm-9">
+	 	<div class="col-12 col-sm-8">
 	 		<h1>About</h1>
-	 		<p>About myself</p>
+	 		<c:if test="${profileUser.about != ' '}">
+		 		<p>
+		 			<c:out value="${profileUser.about}"/>
+		 		</p>
+	 		</c:if>
 	 	</div>
 	</div>
 	<div class="row info" id="form-info" style="display: none">
@@ -54,7 +73,7 @@
 			 			<i class="fa-brands fa-linkedin fa-2x"></i>
 			 		</label>
 			 		<div class="col-sm-11">
-				 		<input type="text" id="linkedin" class="form-control"/>
+				 		<input type="text" id="linkedin" class="form-control" value="${profileUser.linkedin}"/>
 			 		</div>
 		 		</div>
 		 		<div class="form-group row">
@@ -62,15 +81,7 @@
 			 			<i class="fa-brands fa-github fa-2x"></i>
 		 			</label>
 		 			<div class="col-sm-11">
-		 				<input type="text" id="github" class="form-control"/>
-		 			</div>
-		 		</div>
-		 		<div class="form-group row">
-		 			<label class="col-form-label col-sm-1">
-			 			<i class="fa-solid fa-envelope fa-2x"></i>
-		 			</label>
-		 			<div class="col-sm-11">
-		 				<input type="text" id="email" class="form-control"/>
+		 				<input type="text" id="github" class="form-control" value="${profileUser.github}"/>
 		 			</div>
 		 		</div>
  			</form>
@@ -146,14 +157,13 @@
 		let information = {}
 		information["linkedin"] = $("#linkedin").val()
 		information["github"] = $("#github").val()
-		information["email"] = $("#email").val()
 		information["aboutMe"] = $("#aboutMe").val()
 		$.ajax({
 			type: "PATCH",
 			contentType: "application/json",
 			url: "/user/info",
 			data: JSON.stringify(information),
-			dataType: 'json'
+			dataType: 'json',
 		})
 	})
 	// hover over

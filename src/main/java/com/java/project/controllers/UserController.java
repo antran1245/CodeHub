@@ -105,22 +105,20 @@ public class UserController {
 	}
 	
 //	Update Profile Page
-	@SuppressWarnings("rawtypes")
 	@PatchMapping("/user/info")
-	public ResponseEntity updateProfilePage(@Valid @RequestBody ProfileInfo profile, HttpSession session) throws URISyntaxException {
+	public String updateProfilePage(@Valid @RequestBody ProfileInfo profile, HttpSession session) throws URISyntaxException {
 		if(session.getAttribute("uuid") == null) {
-			return (ResponseEntity) ResponseEntity.created(new URI("/login"));
+			return "redirect:/login";
 		}
 		Long id = (Long) session.getAttribute("uuid");
 		User user = userServ.findUser(id);
 		user.setAbout(profile.getAboutMe());
 		user.setLinkedin(profile.getLinkedin());
 		user.setGithub(profile.getGithub());
-		user.setEmail(profile.getEmail());
 		
 		userServ.update(user);
 		
-		return ResponseEntity.ok(HttpStatus.OK);
+		return "redirect://user/"+id;
 	}
 }
 	

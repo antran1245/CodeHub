@@ -62,8 +62,13 @@ public class UserService {
 	        }
 	 }
 	 
-//	 =========================== Save ==========================================
+//	 =========================== Update ==========================================
 	 public void update(User user) {
 		 userRepo.update(user.getId(), user.getEmail(), user.getLinkedin(), user.getGithub(), user.getAbout());
+	 }
+	 
+//	 ============================ Save =========================================
+	 public void save(User user) {
+		 userRepo.save(user);
 	 }
 }
