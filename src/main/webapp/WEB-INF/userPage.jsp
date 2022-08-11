@@ -149,6 +149,7 @@
 			ele.innerText = "Edit"
 			$("#form-info").css("display", "none")
 			$("#display-info").css("display", "flex")
+			location.reload(true)
 		}
 	}
 	
@@ -163,7 +164,7 @@
 			contentType: "application/json",
 			url: "/user/info",
 			data: JSON.stringify(information),
-			dataType: 'json',
+			dataType: 'json'
 		})
 	})
 	// hover over

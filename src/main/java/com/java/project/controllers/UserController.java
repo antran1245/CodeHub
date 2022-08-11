@@ -1,14 +1,11 @@
 package com.java.project.controllers;
 
-import java.net.URI;
 import java.net.URISyntaxException;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -106,7 +103,7 @@ public class UserController {
 	
 //	Update Profile Page
 	@PatchMapping("/user/info")
-	public String updateProfilePage(@Valid @RequestBody ProfileInfo profile, HttpSession session) throws URISyntaxException {
+	public String updateProfilePage(@Valid @RequestBody ProfileInfo profile, HttpSession session, Model model) {
 		if(session.getAttribute("uuid") == null) {
 			return "redirect:/login";
 		}
@@ -117,8 +114,8 @@ public class UserController {
 		user.setGithub(profile.getGithub());
 		
 		userServ.update(user);
-		
-		return "redirect://user/"+id;
+		model.addAttribute("profileUser", user);
+		return "userPage.jsp";
 	}
 }
 	
