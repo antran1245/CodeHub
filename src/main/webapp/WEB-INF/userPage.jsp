@@ -34,7 +34,7 @@
 		</div>
 	</div>
  	<div class="row info" id="display-info" style="display: flex">
- 		<div class="col-12 col-sm-4">
+ 		<div class="col-12 col-sm-4 col-md-3">
  			<h1>Info</h1>
 	 		<p>
 	 			<c:if test="${profileUser.linkedin != ' '}">
@@ -55,7 +55,7 @@
 	 			</c:if>
 	 		</p>
  		</div>
-	 	<div class="col-12 col-sm-8">
+	 	<div class="col-12 col-sm-8 col-md-9">
 	 		<h1>About</h1>
 	 		<c:if test="${profileUser.about != ' '}">
 		 		<p>
@@ -115,20 +115,15 @@
 			ele.innerText = "Save"
 			$("#form-info").css("display", "flex")
 			$("#display-info").css("display", "none")
-			ele.removeAttribute("form")
-			ele.removeAttribute("type")
 		} else if(ele.innerText === "Save"){
-			ele.setAttribute("form", "input-form")
-			ele.setAttribute("type", "submit")
+			updateInfo()
 			ele.innerText = "Edit"
 			$("#form-info").css("display", "none")
 			$("#display-info").css("display", "flex")
-			location.reload(true)
+			location.reload()
 		}
 	}
-	
-	$("#input-form").submit(function(e) {
-		e.preventDefault()
+	function updateInfo() {
 		let information = {}
 		information["linkedin"] = $("#linkedin").val()
 		information["github"] = $("#github").val()
@@ -140,7 +135,8 @@
 			data: JSON.stringify(information),
 			dataType: 'json'
 		})
-	})
+	}
+	
 	// hover over
 	 $(".card").hover(function() {
          $(this).find("div").css("display", "flex");
