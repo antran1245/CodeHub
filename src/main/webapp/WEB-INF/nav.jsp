@@ -1,6 +1,6 @@
 
 <div class="fixed-nav-bar">		
-	<div class="logo"><span>CodeHub</span></div>
+	<div class="logo"><a href="/"><span>CodeHub</span></a></div>
 		<input type="checkbox" id="menuButton" />
 		<label for="menuButton" class="menu-button-label">
  					<div class="white-bar"></div>

@@ -26,6 +26,9 @@ public class ProjectService {
 	public Project getProject(Long id) {
 		return projectRepo.findById(id).orElse(null);
 	}
+	public List<Project> allProjectFromUser(Long id) {
+		return projectRepo.findAllById(id);
+	}
 	
 //	======================== Delete ============================
 	public void deleteProject(Long id) {

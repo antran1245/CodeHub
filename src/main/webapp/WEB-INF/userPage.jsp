@@ -91,49 +91,23 @@
 	 		<textarea id="aboutMe" class="form-control" rows="3" placeholder="About..."></textarea>
 	 	</div>
 	</div>
- </div>
-	<%-- <div class="parent">
-		<div class="child">
-			<c:forEach var="project" items="${projects}">
-					<div class="card">
-				<a href="/project/${project.id}/detail">
-							<img class="card-img" src="${project.getImage()}" alt="${project.getTitle()}"  width="290" height="290"/>
+	<div class="row">
+		<c:forEach var="project" items="${projects}">
+			<div class="col-6 col-sm-6 mt-3">
+				<div class="card">
+					<a href="/project/${project.id}/detail">
+						<img class="card-img" src="${project.getImage()}" alt="${project.getTitle()}"  width="290" height="290"/>
 						<div class="card-img-overlay flex-column justify-content-between" style="display:none">
 							<h3 class="card-title"> <c:out value="${project.getTitle()}"/></h3>
 							<p class="card-text"><c:out value="${project.getCaption()}"/></p>
 						</div>
-				</a>
-					</div>
-			</c:forEach>
-		</div>
-	</div> --%>
- 
-<!--  
-	<div class="container">
-		<header class="row">
-				<h1 class="heading-text">CodeHub</h1>
-		</header>
-		<div class="row">
-			<div class="col form-box p-3 m-2">
-				<h2>About me</h2>
-				<button type="submit" class="btn btn-primary">edit</button>
-			</div>
-		</div>
-		<div class="row row-cols-2 row-cols-md-2 g-4">
-			<c:forEach var="project" items="${user.getProjects()}">
-				<div class="col">
-					<div class="card">
-						<img src="${project.getImage()}" alt="${project.getTitle()}" />
-						<div class="card-body">
-							<h5 class="card-title"><c:out value="${project.getTitle()}"/></h5>
-							<p class="card-text"><c:out value="${project.getCaption()}"/></p>
-							<p class="card-text"><c:out value="${project.getContent()}"/></p>
-						</div>
-					</div>
+					</a>
 				</div>
-			</c:forEach>
-		</div>
-   </div>
+			</div>
+		</c:forEach>
+	</div>
+ </div>
+	
     --> 
     <script type="text/javascript">
 	function switchForm(ele) {

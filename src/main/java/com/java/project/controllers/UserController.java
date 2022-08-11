@@ -1,6 +1,6 @@
 package com.java.project.controllers;
 
-import java.net.URISyntaxException;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -18,7 +18,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.java.project.models.LoginUser;
 import com.java.project.models.ProfileInfo;
+import com.java.project.models.Project;
 import com.java.project.models.User;
+import com.java.project.services.ProjectService;
 import com.java.project.services.UserService;
 
 
@@ -27,6 +29,8 @@ public class UserController {
 
 	@Autowired
 	private UserService userServ;
+	@Autowired
+	private ProjectService projectServ;
 
 //	========================== DISPLAY ======================================
 	@GetMapping("/login")
@@ -64,7 +68,11 @@ public class UserController {
 		if(id != null) {
 			User profileUser = userServ.findUser(id);
 			model.addAttribute("profileUser", profileUser);
+			
+			List<Project> projects = projectServ.allProjectFromUser((Long) id);
+			model.addAttribute("projects", projects);
 		}
+		
 		return "userPage.jsp";
 	}
 ////	
@@ -115,6 +123,10 @@ public class UserController {
 		
 		userServ.update(user);
 		model.addAttribute("profileUser", user);
+		
+		List<Project> projects = projectServ.allProjectFromUser(id);
+		model.addAttribute("projects", projects);
+		
 		return "userPage.jsp";
 	}
 }

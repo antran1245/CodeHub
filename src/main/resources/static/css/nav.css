@@ -180,7 +180,7 @@ a:link {
 	color: #fff;
 }
 a:active {
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover, a:active {
   transition: 0s;

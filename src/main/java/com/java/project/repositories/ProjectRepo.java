@@ -14,4 +14,7 @@ public interface ProjectRepo extends CrudRepository<Project, Long> {
 	
 	@Query(value = "SELECT * FROM projects project WHERE project.user_id = ?1 AND project.id != ?2", nativeQuery = true)
 	List<Project> findAllByUserId(Long userId, Long projectId);
+	
+	@Query(value = "SELECT * FROM projects project WHERE project.user_id = ?1", nativeQuery = true)
+	List<Project> findAllById(Long id);
 }
