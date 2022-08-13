@@ -15,21 +15,14 @@
     <!-- for Bootstrap CSS -->
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/newProject.css"> <!-- change to match your file/naming structure -->
+    <link rel="stylesheet" href="/css/nav.css"> 
     <!-- For any Bootstrap that uses JS or jQuery-->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
     <jsp:include page="/WEB-INF/background.jsp"></jsp:include>
 </head>
 <body>
-<header class="top">
-			<div class="an">
-			
-					<a href="/"><span>CodeHub</span></a>
-			</div>
-			<div class="tran">
-					<p> right</p>
-			</div>
-		</header>
+	<jsp:include page="/WEB-INF/nav.jsp"></jsp:include>
 	<div class="container">
 				<div class="pageName">Add Project</div>
 		<div class="row">

@@ -1,31 +1,36 @@
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <div class="fixed-nav-bar">		
 	<div class="logo"><a href="/"><span>CodeHub</span></a></div>
 		<input type="checkbox" id="menuButton" />
 		<label for="menuButton" class="menu-button-label">
- 					<div class="white-bar"></div>
- 					<div class="white-bar"></div>
- 					<div class="white-bar"></div>
- 					<div class="white-bar"></div>
+ 					<span class="white-bar"></span>
+ 					<span class="white-bar"></span>
+ 					<span class="white-bar"></span>
+ 					<span class="white-bar"></span>
 		</label>				
 </div>
 <div class="the-bass">
     	<div class="rela-block drop-down-container">
         	<div class="drop-down-item"><a href="/project/new"><span>Create</span></a></div>
     	</div>
-    	<div class="rela-block drop-down-container">
     		<c:choose>
 	    		<c:when test="${empty user}">
-	    			<div class="drop-down-item"><a href="/login"><span>Login/ Sign Up</span></a></div>
+		    		<div class="rela-block drop-down-container">
+		    			<div class="drop-down-item"><a href="/login"><span>Login/ Sign Up</span></a></div>
+		    		</div>
+		    		<div class="rela-block drop-down-container">
+			        	<div class="drop-down-item"><a href="/login"><span>Profile</span></a></div>
+			    	</div>
 	    		</c:when>
 	    		<c:otherwise>
-		        	<div class="drop-down-item"><a href="/logout"><span>Logout</span></a></div>
+		    		<div class="rela-block drop-down-container">
+			        	<div class="drop-down-item"><a href="/logout"><span>Logout</span></a></div>
+			        </div>
+			        <div class="rela-block drop-down-container">
+			        	<div class="drop-down-item"><a href="/user/${user.getId()}"><span>Profile</span></a></div>
+			    	</div>
 	    		</c:otherwise>
     		</c:choose>
-    	</div>
-    	<div class="rela-block drop-down-container">
-        	<div class="drop-down-item"><a href="/user"><span>Profile</span></a></div>
-    	</div>
 </div>
 <script type="text/javascript">
 $( document ).ready(function() {

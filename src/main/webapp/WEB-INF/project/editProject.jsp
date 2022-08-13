@@ -15,11 +15,14 @@
     <!-- for Bootstrap CSS -->
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css"> <!-- change to match your file/naming structure -->
+    <link rel="stylesheet" href="/css/nav.css"> 
     <!-- For any Bootstrap that uses JS or jQuery-->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <jsp:include page="/WEB-INF/background.jsp"></jsp:include>
 </head>
 <body>
+	<jsp:include page="/WEB-INF/nav.jsp"></jsp:include>
 	<div class="container">
 		<header>Add a project</header>
 		<div class="row">

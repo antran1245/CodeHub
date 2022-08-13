@@ -15,63 +15,15 @@
     <!-- for Bootstrap CSS -->
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">   
-    <link rel="stylesheet" href="/css/home.css"> <!-- change to match your file/naming structure -->
+    <link rel="stylesheet" href="/css/home.css"> 
+    <link rel="stylesheet" href="/css/nav.css"> 
     <!-- For any Bootstrap that uses JS or jQuery-->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<jsp:include page="background.jsp"></jsp:include>
-<!--  <a href="/home" class="logo">CodeHub</a>		
-				<ul class="navbar-nav mx-1 d-flex justify-content-end flex-row">
-					<li class="nav-item mx-1">
-						<a class="btn btn-outline-primary" href="/project/new">Create a Post</a>
-
-					</li>
-					<li>
-						<a href="/login">Login/Sign Up</a>
-					</li>
-					<li>
-						<form>
-							<div class="input-group">
-								<input type="search" placeholder="Search" class="form-control" placeholder="Search"/>
-								<button type="submit" class="btn btn-primary input-group-append">
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</button>
-							</div>
-						</form>
-					</li>
-				</ul>-->
-				
-	 <div class="fixed-nav-bar">		
-				<div class="logo"><span>CodeHub</span></div>
-    				<input type="checkbox" id="menuButton" />
-    					<label for="menuButton" class="menu-button-label">
-        					<div class="white-bar"></div>
-        					<div class="white-bar"></div>
-        					<div class="white-bar"></div>
-        					<div class="white-bar"></div>
-    					</label>				
-	</div>
-	
-<div class="the-bass">
-    	<div class="rela-block drop-down-container">
-        	<div class="drop-down-item"><a href="/project/new"><span>Create</span></a></div>
-    	</div>
-    	<div class="rela-block drop-down-container">
-    		<c:choose>
-	    		<c:when test="${empty user}">
-	    			<div class="drop-down-item"><a href="/login"><span>Login/ Sign Up</span></a></div>
-	    		</c:when>
-	    		<c:otherwise>
-		        	<div class="drop-down-item"><a href="/logout"><span>Logout</span></a></div>
-	    		</c:otherwise>
-    		</c:choose>
-    	</div>
-    	<div class="rela-block drop-down-container">
-        	<div class="drop-down-item"><a href="/user/1"><span>Profile</span></a></div>
-    	</div>
-</div>
+	<jsp:include page="background.jsp"></jsp:include>
+	<jsp:include page="/WEB-INF/nav.jsp"></jsp:include>
  
 	<div class="parent">
 		<div class="child">
@@ -90,36 +42,6 @@
 	</div>
 	
 	<script type="text/javascript">
-	$( document ).ready(function() {
-	    
-	    // Function to change the nav-bar on scroll
-	    $(window).scroll(function(){
-	        ($(window).scrollTop() >= 100) ? (
-	            $('.fixed-nav-bar').addClass('scrolled'),
-	            $('.the-bass').addClass('scrolled')
-	        ) : (
-	            $('.fixed-nav-bar').removeClass('scrolled'),
-	            $('.the-bass').removeClass('scrolled')
-	        );
-	    });
-	    
-	    // Drop Down Function
-	    $('#menuButton').on('change', function(){
-	        ($('#menuButton').is(':checked')) ? (
-	            $('.the-bass').addClass('dropped')
-	        ) : (
-	            $('.the-bass').removeClass('dropped')
-	        );
-	    });
-	    
-	    //hover
-		$(".card").hover(function() {
-			$(this).find("div").css("display", "flex");
-		},
-		function(){
-			$(this).find("div").css("display", "none");
-		})
-	});
 	
 	// hover over
 	 $(".card").hover(function() {

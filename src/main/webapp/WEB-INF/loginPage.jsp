@@ -15,22 +15,13 @@
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> <!-- change to match your file/naming structure -->
     <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/nav.css"> 
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 	<jsp:include page="background.jsp"></jsp:include>
 </head>
 <body>
-
-		<header class="top">
-			<div class="an">
-			
-					<a href="/"><span>CodeHub</span></a>
-			</div>
-			<div class="tran">
-					<p> right</p>
-			</div>
-		</header>
-
+	<jsp:include page="/WEB-INF/nav.jsp"></jsp:include>
 	<div class="container">
 		
 		<div class="row">
