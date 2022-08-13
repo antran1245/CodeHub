@@ -69,7 +69,7 @@
     		</c:choose>
     	</div>
     	<div class="rela-block drop-down-container">
-        	<div class="drop-down-item"><a href="/user"><span>Profile</span></a></div>
+        	<div class="drop-down-item"><a href="/user/1"><span>Profile</span></a></div>
     	</div>
 </div>
  
