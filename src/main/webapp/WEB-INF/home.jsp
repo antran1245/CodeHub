@@ -28,14 +28,12 @@
 	<div class="parent">
 		<div class="child">
 			<c:forEach var="project" items="${projects}">
-				<div class="card">
-					<a href="/project/${project.id}/detail">
+				<div class="card" onclick="detail(${project.getId()})">
 						<img class="card-img" src="${project.getImage()}" alt="${project.getTitle()}"  width="290" height="290"/>
 						<div class="card-img-overlay flex-column justify-content-between" style="display:none">
 							<h3 class="card-title"> <c:out value="${project.getTitle()}"/></h3>
 							<p class="card-text"><c:out value="${project.getCaption()}"/></p>
 						</div>
-					</a>
 				</div>
 			</c:forEach>
 		</div>
@@ -50,6 +48,9 @@
      function(){
          $(this).find("div").css("display", "none");
      })
+     function detail(id) {
+		location.href="/project/"+id+"/detail"
+	}
 	</script>
 </body>
 </html>
