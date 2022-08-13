@@ -19,3 +19,7 @@ Oh and for those that have absolutely zero interest in coding projects you are m
 
 ### Home Page
 ![CodeHubHome](https://user-images.githubusercontent.com/99916869/182709745-921dda01-cf41-4cae-b635-400b66601f8d.png)
+
+
+### User Profile Page
+![profileCodehub](https://user-images.githubusercontent.com/99916869/184465629-b528ed8b-a2a3-495f-9b3b-16653925c652.png)
