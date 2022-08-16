@@ -19,11 +19,11 @@
 	padding-top: 55px;
 	padding-bottom: 25px;
 	background-color: rgb(0, 0, 0);
-	
+	height: 100%;
 	border-radius: 15px;
-	display: flex;
+/* 	display: flex;
 	justify-content: space-around;
-	flex-wrap: wrap;
+	flex-wrap: wrap; */
 }
 
 .card {
@@ -31,14 +31,17 @@
   	padding-right: 15px;
   	padding-bottom: 50px;
   	padding-left: 15px;
-  	margin-top: 70px;
-  	margin-bottom: 35px;
+   	margin-top: 20px;
+/*  	margin-bottom: 35px;
   	margin-right: 25px;
-  	margin-left: 25px;
-  	opacity: 1 !important;
-  	
+  	margin-left: 25px;   */	
 }
 
+.grid-item {
+	margin: auto;
+	width: 100%;
+	display: inline-block;
+}
 .card-title {
 	font-weight: 700;
 }
